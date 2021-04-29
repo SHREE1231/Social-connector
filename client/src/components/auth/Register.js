@@ -12,7 +12,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         name: '',
         email: '',
         password: '',
-        password2: '',
+        password2: ''
     
     });
 

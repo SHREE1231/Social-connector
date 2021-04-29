@@ -8,6 +8,12 @@ import { logout } from '../../actions/auth';
     const authLinks = (
       <ul>
         <li>
+          <Link to="/dashboard">
+          <i className ="fas.fa-sign-out-alt" />{ ' '}
+          <span className = "hide-sm">Dashboard</span>
+          </Link>
+        </li>
+        <li>
           <a onClick={logout} href="#">
             <i className ="fas.fa-sign-out-alt"></i>{ ' '}
             <span className = "hide-sm">Logout</span>
@@ -47,7 +53,7 @@ import { logout } from '../../actions/auth';
     );
 };
 
- Navbar.PropTypes ={
+ Navbar.propTypes ={
    logout: PropTypes.func.isRequired,
    auth: PropTypes.object.isRequired
  };
@@ -57,4 +63,4 @@ import { logout } from '../../actions/auth';
    auth:state.auth
  });
 
- export default connect(mapsStateToProps, {logout })(Navbar);
+ export default connect(mapStateToProps, {logout })(Navbar);
