@@ -8,6 +8,9 @@ import { logout } from '../../actions/auth';
     const authLinks = (
       <ul>
         <li>
+          <Link to="/profiles">Developers</Link>
+        </li>
+        <li>
           <Link to="/dashboard">
           <i className ="fas.fa-sign-out-alt" />{ ' '}
           <span className = "hide-sm">Dashboard</span>
@@ -26,8 +29,8 @@ import { logout } from '../../actions/auth';
     const guestLinks = (
       <ul>
         <li>
-          <Link to="#">Developers</Link>
-          </li>
+          <Link to="/profiles">Developers</Link>
+        </li>
         
         <li>
           <Link to="/register">Register</Link>
