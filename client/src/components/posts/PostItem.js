@@ -12,7 +12,7 @@ const PostItem = ({
     auth, 
     post: { _id, text, name, avatar, user, likes, comments, date},
     showActions
- }) => <div class="post bg-white p-1 my-1">
+ }) => ( <div class="post bg-white p-1 my-1">
           <div>
             <Link to= {`/profile/${user}`}>
               <img
@@ -31,8 +31,8 @@ const PostItem = ({
                 Posted on <Moment format ='YYYY/MM/DD'>{date}</Moment>
             </p>
 
-            {showActions && <Fragment>
-              <button onClick={e => addLike(_id)} type ="button" class="btn btn-light">
+            {showActions && ( <Fragment>
+              <button onClick={ e => addLike(_id)} type ="button" class="btn btn-light">
               <i class="fas fa-thumbs-up"></i>{' '}
                  <span>{likes.length > 0 && 
                  <span>{likes.length}</span>
@@ -43,7 +43,7 @@ const PostItem = ({
             </button>
             <Link to={`/post/${_id}`} class="btn btn-primary">
               Discussion {' '} 
-                  {comments.length > 0 && (
+                {comments.length > 0 && (
                  <span class='comment-count'>{comments.length}</span>
               )}
             </Link>
@@ -56,10 +56,11 @@ const PostItem = ({
             </button>
             )}
          </Fragment>
-         }
+        )}
        </div>
     </div>
-
+ )
+  
     PostItem.defaultProps ={
       showActions: true
     };
@@ -70,9 +71,11 @@ PostItem.propTypes = {
    addLike:PropTypes.func.isRequired,
    removeLike:PropTypes.func.isRequired,
    deletePost:PropTypes.func.isRequired,
+   showActions: PropTypes.bool
 }
-const mapStateToProps = state => ({
-    auth:state.auth
+
+const mapStateToProps = (state) => ({
+    auth: state.auth
 })
 
 export default connect(mapStateToProps, { addLike, removeLike, deletePost })(PostItem)

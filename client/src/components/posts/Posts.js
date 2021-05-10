@@ -11,7 +11,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
        getPosts();
    }, [getPosts]);
  
-   return loading ? <Spinner /> : (
+   return  loading ? <Spinner /> : (
     <Fragment>
         <h1 clasName = "large text-primary">Posts</h1>
         <p className = 'lead'>

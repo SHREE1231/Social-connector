@@ -15,7 +15,7 @@ const PostForm = ({ addPost }) => {
         <form class="form my-1" onSubmit= {e => {
             e.preventDefault();
             addPost({ text });
-            setText(' ');
+            setText('');
         }}>
           <textarea
             name="text"
@@ -33,7 +33,7 @@ const PostForm = ({ addPost }) => {
 }
 
 PostForm.propTypes = {
+  addPost: PropTypes.func.isRequired,
+};
 
-}
-
-export default connect(null, { addPost }) (PostForm)
+export default connect(null, { addPost })(PostForm)
