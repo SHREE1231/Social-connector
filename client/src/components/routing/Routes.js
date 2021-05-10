@@ -14,9 +14,9 @@ import Posts from '../posts/Posts';
 import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import Profile from '../profile/Profile';
-import { defaults } from 'request';
 
-export const Routes = () => {
+
+ const Routes = props => {
     return (
         <section className=" container">
         <Alert />
