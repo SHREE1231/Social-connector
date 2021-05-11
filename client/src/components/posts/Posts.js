@@ -19,19 +19,19 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
         </p>
         <PostForm />
         <div className ='posts'>
-            {posts.map(post => (
+            {posts.map((post) => (
                <PostItem key ={post._id} post={post} />
             ))}
         </div>
     </Fragment> 
    );
-}
+};
 
 Posts.propTypes = {
    getPosts:PropTypes.func.isRequired,
    post:PropTypes.object.isRequired,
 }
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
    post :state.post
 });
 

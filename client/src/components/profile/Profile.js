@@ -61,9 +61,9 @@ const Profile = ({
               )} 
             </div>
         
-            {profile.gihubusername && (
-                <ProfileGithub username ={profile.githubusername} />
-            )}
+            {profile.githubusername ? (
+               <ProfileGithub  username ={profile.githubusername} /> ) : null} 
+            
             </div>
     </Fragment>
     )}

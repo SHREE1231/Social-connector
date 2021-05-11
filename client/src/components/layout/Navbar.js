@@ -11,6 +11,9 @@ import { logout } from '../../actions/auth';
           <Link to="/profiles">Developers</Link>
         </li>
         <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+        <li>
           <Link to="/dashboard">
           <i className ="fas.fa-sign-out-alt" />{ ' '}
           <span className = "hide-sm">Dashboard</span>
@@ -31,10 +34,6 @@ import { logout } from '../../actions/auth';
         <li>
           <Link to="/profiles">Developers</Link>
         </li>
-        <li>
-          <Link to="/posts">Posts</Link>
-        </li>
-        
         <li>
           <Link to="/register">Register</Link>
         </li>
@@ -69,4 +68,4 @@ import { logout } from '../../actions/auth';
    auth:state.auth
  });
 
- export default connect(mapStateToProps, {logout })(Navbar);
+ export default connect(mapStateToProps, { logout })(Navbar);
